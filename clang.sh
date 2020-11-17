@@ -21,5 +21,7 @@
 # IN THE SOFTWARE.
 
 set -x
-rm -f 64hello 64hello.o
-nasm -felf64 -o 64hello.o 64hello.asm  && ld -m elf_x86_64 64hello.o -o 64hello && hexdump -v -e '"\\""x" 1/1 "%02x" ""' 64hello && echo && echo
+
+#clang-format -style=mozilla -dump-config > .clang-format
+clang-format -i *.c
+cat *.c
