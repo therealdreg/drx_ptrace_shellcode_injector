@@ -37,7 +37,7 @@ For a 64 bit process:
 
 ### python reverse shell detached background: local privilege escalation via ptrace misconfiguration
 
-https://github.com/David-Reguera-Garcia-Dreg/python_reverse_shell_detached_background/
+Based from: https://github.com/David-Reguera-Garcia-Dreg/python_reverse_shell_detached_background/
 
 Steps for **64 bit process**:
 
