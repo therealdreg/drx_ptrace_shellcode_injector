@@ -44,7 +44,7 @@ Steps for **64 bit process**:
 Generate IP str, for ex 51.195.45.136 (SPACES between numbers)
 ```
 export IP_ADDR=51.195.45.136
-xxd -p <<< `printf '%02X' ${IP_ADDR//./ }`  | sed 's/.$//' | sed 's/.$//' | sed 's/\(..\)/\\\\x&/g; s/, $//;'
+xxd -p <<< `printf '%02x' ${IP_ADDR//./ }`  | sed 's/.$//' | sed 's/.$//' | sed 's/\(..\)/\\\\x&/g; s/, $//;'
 ```
 result: \\x33\\x33\\x43\\x33\\x32\\x44\\x38\\x38
 
