@@ -48,7 +48,7 @@ xxd -p <<< `printf '%02x' ${IP_ADDR//./ }`  | sed 's/.$//' | sed 's/.$//' | sed 
 ```
 result: \\x33\\x33\\x63\\x33\\x32\\x64\\x38\\x38
 
-Generate PORT str, for ex 6868
+Generate PORT str, WARNING! only is valid a range port from 1000 to 9999 (no 89, no 10003), for ex 6868
 ```
 xxd -p <<< 6868 | sed 's/.$//' | sed 's/.$//' | sed 's/\(..\)/\\\\x&/g; s/, $//;'
 ```
