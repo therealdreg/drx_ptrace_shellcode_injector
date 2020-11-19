@@ -46,13 +46,19 @@ Generate IP str, for ex 51.195.45.136
 export IP_ADDR=51.195.45.136
 xxd -p <<< `printf '%02x' ${IP_ADDR//./ }`  | sed 's/.$//' | sed 's/.$//' | sed 's/\(..\)/\\\\x&/g; s/, $//;'
 ```
-result: \\x33\\x33\\x63\\x33\\x32\\x64\\x38\\x38
+result: 
+```
+\\x33\\x33\\x63\\x33\\x32\\x64\\x38\\x38
+```
 
 Generate PORT str, WARNING! only is valid a range port from 1000 to 9999 (no 89, no 10003), for ex 6868
 ```
 xxd -p <<< 6868 | sed 's/.$//' | sed 's/.$//' | sed 's/\(..\)/\\\\x&/g; s/, $//;'
 ```
-result: \\x36\\x38\\x36\\x38
+result: 
+```
+\\x36\\x38\\x36\\x38
+```
 
 Replace in this command the **IP_HEX** and **PORT_HEX** with the PORT STR & IP STR output:
 
