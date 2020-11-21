@@ -1,6 +1,10 @@
 # drx_ptrace_shellcode_injector
 drx ptrace shellcode injector
 
+WARNING: only works for x86_64 systems (x86 will be supported), current support:
+* can inject code from x86_64-drx-compiled to x86_64 process
+* can inject code from x86_64-drx-compiled to x86 process
+
 ## How to compile
 
 ```
