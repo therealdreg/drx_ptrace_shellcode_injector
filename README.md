@@ -47,6 +47,8 @@ bash-5.0#
 
 ### python reverse shell detached background: local privilege escalation via ptrace misconfiguration
 
+Injects a python reverse shell into sudo-authenticated-shell process
+
 Based from: https://github.com/David-Reguera-Garcia-Dreg/python_reverse_shell_detached_background/
 
 Steps for **64 bit process**:
