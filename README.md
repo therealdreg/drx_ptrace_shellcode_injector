@@ -150,7 +150,6 @@ connect to [127.0.0.1] from fr33project.org [127.0.0.1] 33622
 root
 # id
 uid=0(root) gid=0(root) groups=0(root)
-#
 ```
 
 # Contributors
