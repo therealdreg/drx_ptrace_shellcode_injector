@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# greetz to micronn: pyrev64.sh - https://github.com/micronn https://twitter.com/micronn386
 # MIT License - Copyright 2020
 # David Reguera Garcia aka Dreg - dreg@fr33project.org
 # -
