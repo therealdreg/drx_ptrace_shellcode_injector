@@ -57,6 +57,8 @@ Steps for **64 bit process**:
 
 Just execute **./drx PID $(./pyrev64.sh IP PORT)**
 
+**WARNING: Only is valid a range port from 1000 to 9999 (no 89, no 10003 ...)**
+
 Example PID 2904, IP 127.0.0.1, PORT 3456
 ```
 ./drx 2904 $(./pyrev64.sh 127.0.0.1 3456)
