@@ -28,7 +28,7 @@ PORT="${2:-9999}"
 while read -d. n
 do
 	case "$n" in
-	[!0-9]*)
+	''|[!0-9]*)
 		echo "invalid ip" >&2
 		exit 1
 		;;
