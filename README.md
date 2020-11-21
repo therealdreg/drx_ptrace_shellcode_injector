@@ -134,6 +134,7 @@ root
 # id
 uid=0(root) gid=0(root) groups=0(root)
 ```
+---
 
 Another example for an easy copy-paste: reverse shell to 127.0.0.1:9999, target pid 1081
 
