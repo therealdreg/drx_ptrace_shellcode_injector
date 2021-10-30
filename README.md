@@ -1,6 +1,8 @@
 # drx_ptrace_shellcode_injector
 drx ptrace shellcode injector
 
+Please, consider make a donation: https://github.com/sponsors/therealdreg
+
 **WARNING: only works for x86_64 systems (x86 will be supported)**
 
 Current support:
